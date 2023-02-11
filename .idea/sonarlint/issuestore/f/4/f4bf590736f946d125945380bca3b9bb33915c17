@@ -1,0 +1,16 @@
+
+[
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ÉËß­
+`
+java:S1124	"EReorder the modifiers to comply with the Java Language Specification.( ¥õûÿÿÿÿ
+`
+java:S1124
+"EReorder the modifiers to comply with the Java Language Specification.(àİ®£ÿÿÿÿÿ
+R
+java:S2209"5Change this instance-reference to a static reference.(ªßìÃ8‹®Ş…ä0
+W
+java:S2209"5Change this instance-reference to a static reference.(æ­¬ïùÿÿÿÿ8ÔĞŞ…ä0
+W
+java:S2209"5Change this instance-reference to a static reference.(ÊÜâŞüÿÿÿÿ8ÃèŞ…ä0
+F
+java:S2446t"0"notify" may not wake up the appropriate thread.(şÎÖå

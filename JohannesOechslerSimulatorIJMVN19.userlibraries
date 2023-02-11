@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="Maven: org.openjfx:javafx-controls:19">
+    <archive path="/Users/johannesoechsler/.m2/repository/org/openjfx/javafx-controls/19/javafx-controls-19.jar" />
+  </library>
+  <library name="Maven: org.openjfx:javafx-controls:mac:19">
+    <archive path="/Users/johannesoechsler/.m2/repository/org/openjfx/javafx-controls/19/javafx-controls-19-mac.jar" />
+  </library>
+  <library name="Maven: org.openjfx:javafx-graphics:19">
+    <archive path="/Users/johannesoechsler/.m2/repository/org/openjfx/javafx-graphics/19/javafx-graphics-19.jar" />
+  </library>
+  <library name="Maven: org.openjfx:javafx-graphics:mac:19">
+    <archive path="/Users/johannesoechsler/.m2/repository/org/openjfx/javafx-graphics/19/javafx-graphics-19-mac.jar" />
+  </library>
+  <library name="Maven: org.openjfx:javafx-base:19">
+    <archive path="/Users/johannesoechsler/.m2/repository/org/openjfx/javafx-base/19/javafx-base-19.jar" />
+  </library>
+  <library name="Maven: org.openjfx:javafx-base:mac:19">
+    <archive path="/Users/johannesoechsler/.m2/repository/org/openjfx/javafx-base/19/javafx-base-19-mac.jar" />
+  </library>
+  <library name="Maven: org.openjfx:javafx-fxml:19">
+    <archive path="/Users/johannesoechsler/.m2/repository/org/openjfx/javafx-fxml/19/javafx-fxml-19.jar" />
+  </library>
+  <library name="Maven: org.openjfx:javafx-fxml:mac:19">
+    <archive path="/Users/johannesoechsler/.m2/repository/org/openjfx/javafx-fxml/19/javafx-fxml-19-mac.jar" />
+  </library>
+  <library name="lib">
+    <archive path="/Users/johannesoechsler/Documents/Uni/Semester 5/Java-Technologien/javafx-sdk-19/lib/javafx-swt.jar" />
+    <archive path="/Users/johannesoechsler/Documents/Uni/Semester 5/Java-Technologien/javafx-sdk-19/lib/javafx.web.jar" />
+    <archive path="/Users/johannesoechsler/Documents/Uni/Semester 5/Java-Technologien/javafx-sdk-19/lib/javafx.base.jar" />
+    <archive path="/Users/johannesoechsler/Documents/Uni/Semester 5/Java-Technologien/javafx-sdk-19/lib/javafx.fxml.jar" />
+    <archive path="/Users/johannesoechsler/Documents/Uni/Semester 5/Java-Technologien/javafx-sdk-19/lib/javafx.media.jar" />
+    <archive path="/Users/johannesoechsler/Documents/Uni/Semester 5/Java-Technologien/javafx-sdk-19/lib/javafx.swing.jar" />
+    <archive path="/Users/johannesoechsler/Documents/Uni/Semester 5/Java-Technologien/javafx-sdk-19/lib/javafx.controls.jar" />
+    <archive path="/Users/johannesoechsler/Documents/Uni/Semester 5/Java-Technologien/javafx-sdk-19/lib/javafx.graphics.jar" />
+  </library>
+</eclipse-userlibraries>
+

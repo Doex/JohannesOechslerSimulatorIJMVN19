@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component LANGUAGE_LEVEL="JDK_16" inheritJdk="true">
+	<output-test url="file://$MODULE_DIR$/target/test-classes"/>
+	<contentEntry url="file://$MODULE_DIR$">
+		<testFolder url="file://$MODULE_DIR$/src/test/java"/>
+		<excludeFolder url="file://$MODULE_DIR$/target"/>
+	</contentEntry>
+	<levels>
+		<level name="lib" value="project"/>
+		<level name="Maven: org.openjfx:javafx-controls:19" value="project"/>
+		<level name="Maven: org.openjfx:javafx-controls:mac:19" value="project"/>
+		<level name="Maven: org.openjfx:javafx-graphics:19" value="project"/>
+		<level name="Maven: org.openjfx:javafx-graphics:mac:19" value="project"/>
+		<level name="Maven: org.openjfx:javafx-base:19" value="project"/>
+		<level name="Maven: org.openjfx:javafx-base:mac:19" value="project"/>
+		<level name="Maven: org.openjfx:javafx-fxml:19" value="project"/>
+		<level name="Maven: org.openjfx:javafx-fxml:mac:19" value="project"/>
+	</levels>
+</component>
