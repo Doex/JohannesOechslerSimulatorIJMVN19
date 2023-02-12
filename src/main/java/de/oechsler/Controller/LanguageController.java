@@ -15,6 +15,7 @@ public class LanguageController {
                     } else if (newValue == referencesHandler.getAutomatonStage().getLanguageGermanMenuItem()) {
                         ResourcesController.getResourcesController().setLocale(Locale.GERMAN);
                     }
+                    referencesHandler.getAutomatonStage().getStatesPane().setCPickers();
                 });
     }
 

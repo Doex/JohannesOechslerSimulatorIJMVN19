@@ -52,7 +52,6 @@ public abstract class   Automaton extends Observable {
         this.rows = rows;
         this.columns = columns;
         this.isTorus = isTorus;
-        //TODO: dynamisch machen, nur zum testen
         numberOfStates = 2;
         this.cells = new Cell[rows][columns];
         for (int i = 0; i < cells.length; i++) {

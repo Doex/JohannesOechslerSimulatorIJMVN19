@@ -4,15 +4,14 @@ import de.oechsler.model.Automaton;
 import de.oechsler.util.Observable;
 import de.oechsler.view.AutomatonStage;
 import de.oechsler.view.DatabaseStage;
-import de.oechsler.view.StatesPanel;
+import de.oechsler.view.StatesPane;
 
 
 
 public class ReferenceHandler extends Observable {
 
     private Automaton automaton;
-    private StatesPanel statesPanel;
-    private StatesPanelController statesPanelController;
+    private StatesPaneController statesPaneController;
     private SimulationController simulationController;
     private AutomatonStage automatonStage;
     private AutomatonStageController automatonStageController;
@@ -75,8 +74,8 @@ public class ReferenceHandler extends Observable {
     public void setPopulationPaneController(PopulationPaneController populationPaneController) {
         this.populationPaneController = populationPaneController;
     }
-    public void setStatesPanelController(StatesPanelController statesPanelController) {
-        this.statesPanelController = statesPanelController;
+    public void setStatesPanelController(StatesPaneController statesPaneController) {
+        this.statesPaneController = statesPaneController;
     }
     public void setEditorController(EditorController editorController) {
         this.editorController = editorController;
@@ -111,4 +110,5 @@ public class ReferenceHandler extends Observable {
     public void setPrintController(PrintController printController) {
         this.printController = printController;
     }
+
 }

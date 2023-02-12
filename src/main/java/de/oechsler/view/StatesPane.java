@@ -6,9 +6,12 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 
-public class StatesPanel implements Observer {
+public class StatesPane implements Observer {
 
-    public StatesPanel(ReferenceHandler referenceHandler, AutomatonStage automatonStage){
+    private AutomatonStage stage;
+
+    public StatesPane(ReferenceHandler referenceHandler, AutomatonStage automatonStage){
+        this.stage = automatonStage;
         referenceHandler.add(this);
         for (int i = 0; i < referenceHandler.getAutomaton().getNumberOfStates(); i++) {
 
@@ -27,6 +30,12 @@ public class StatesPanel implements Observer {
             btn.setStyle("-fx-padding: 8px");
             btn.selectedProperty().addListener((observableValue, aBoolean, t1) -> cpick.setDisable(aBoolean));
         }
+    }
+
+    public void setCPickers(){
+       for(int i = 0; i < this.stage.getColorPickerList().size(); i++){
+           this.stage.getColorPickerList().set(i, new ColorPicker(this.stage.getColorPickerList().get(i).getValue()));
+       }
     }
 
     @Override

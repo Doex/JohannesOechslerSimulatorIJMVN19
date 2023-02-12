@@ -25,8 +25,13 @@ public class AutomatonIO {
     public static void createDefaultFolderAndAutomaton() throws IOException {
         File automatonDir = new File("automata");
         if (!automatonDir.exists()) {
-            automatonDir.mkdirs();
+            automatonDir.mkdir();
         }
+        File safeDir = new File("safeDir");
+        if(!safeDir.exists()){
+            safeDir.mkdir();
+        }
+
         createFileWithGivenNameInDir(DEFAULT_NAME);
         createAllAutomatonsForStart();
     }
@@ -47,6 +52,7 @@ public class AutomatonIO {
             }
         }
     }
+
     public static void createAllAutomatonsForStart() throws IOException {
         File golFile = new File(AUTOMATON_DIR + File.separator + GOL_DEFAULT_NAME + JAVA_EXTENSION);
         File krueFile = new File(AUTOMATON_DIR + File.separator + KRUE_DEFAULT_NAME + JAVA_EXTENSION);
@@ -82,6 +88,26 @@ public class AutomatonIO {
             for (File f : Objects.requireNonNull(automatonDirHandle.listFiles())) {
                 Files.delete(f.toPath());
             }
+        }
+    }
+
+    public static void clearSafeDir() throws IOException {
+        File safeDirHandle = new File("safeDir");
+        if (safeDirHandle.exists() && safeDirHandle.isDirectory()) {
+            for (File f : Objects.requireNonNull(safeDirHandle.listFiles())) {
+                Files.delete(f.toPath());
+            }
+        }
+    }
+
+    public static void createCASProperties() throws IOException {
+        File casimulatorProperties = new File("casimulator.properties");
+        if (!casimulatorProperties.exists()) {
+            casimulatorProperties.createNewFile();
+            FileWriter writer = new FileWriter(casimulatorProperties);
+            writer.write("language=en");
+            writer.flush();
+            writer.close();
         }
     }
 

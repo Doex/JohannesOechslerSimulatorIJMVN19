@@ -1,8 +1,6 @@
 package de.oechsler.Controller;
-
 import de.oechsler.model.Automaton;
 import javafx.scene.control.*;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +13,6 @@ public class DatabaseController {
     private static final String DB_URL_PREFIX = "jdbc:derby:" + DB_NAME;
     private static final String DB_URL = DB_URL_PREFIX + ";create=false";
     private static final String DB_URL_CREATE = DB_URL_PREFIX + ";create=true";
-
     private static final String TABLENAME = "SETTINGS";
     private static final String CREATE_TABLE_STATEMENT = "CREATE TABLE " + TABLENAME + " "
             + "( sysName VARCHAR(255) NOT NULL PRIMARY KEY, posX INTEGER NOT NULL, posY INTEGER NOT NULL, cellWidth INTEGER NOT NULL, cellHeight INTEGER NOT NULL, sliderSpeed INTEGER NOT NULL ) ";
@@ -27,7 +24,6 @@ public class DatabaseController {
     private static final String DELETE_STATEMENT = "DELETE FROM " + TABLENAME + " WHERE sysName=?";
     private static Connection connection = null;
     private final ReferenceHandler referenceHandler;
-
 
     public DatabaseController(ReferenceHandler referenceHandler) {
         this.referenceHandler = referenceHandler;
@@ -179,7 +175,6 @@ public class DatabaseController {
 
             }
         }
-
     }
 
     /**

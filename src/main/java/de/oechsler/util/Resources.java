@@ -22,7 +22,6 @@ public class Resources {
         }
     }
 
-
     public static String readResourcesFile(String resourcesFiles) {
         try (BufferedReader in = new BufferedReader(
                 new InputStreamReader(Objects.requireNonNull(Resources.class.getResourceAsStream(path + resourcesFiles))))) {

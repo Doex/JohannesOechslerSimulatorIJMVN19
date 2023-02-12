@@ -12,7 +12,7 @@ public class SerializationController {
 
     static {
         fileChooser = new FileChooser();
-        File dir = new File(".");
+        File dir = new File("safeDir");
         fileChooser.setInitialDirectory(dir);
         FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("*.ser", "*.ser");
         fileChooser.getExtensionFilters().add(extFilter);
