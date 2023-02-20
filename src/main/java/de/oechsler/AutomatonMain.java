@@ -9,7 +9,6 @@ import javafx.application.Application;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
-import java.io.File;
 import java.io.IOException;
 
 public class AutomatonMain extends Application {
@@ -21,12 +20,8 @@ public class AutomatonMain extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        File file = new File("automata");
-        if (!file.exists()) {
-            file.mkdir();
-        }
         AutomatonIO.createDefaultFolderAndAutomaton();
-        new File("./automaton/");
+        AutomatonIO.createCASProperties();
         AutomatonMain.startAutomaton("DefaultAutomaton");
     }
 
@@ -38,7 +33,7 @@ public class AutomatonMain extends Application {
         referenceHandler.setAutomatonStage(new AutomatonStage(referenceHandler));
         referenceHandler.setAutomatonStageController(new AutomatonStageController(referenceHandler));
         referenceHandler.setPopulationPaneController(new PopulationPaneController(referenceHandler));
-        referenceHandler.setStatesPanelController(new StatesPanelController(referenceHandler));
+        referenceHandler.setStatesPanelController(new StatesPaneController(referenceHandler));
         automaton.add(referenceHandler.getAutomatonStage().getPopulationPane());
         referenceHandler.setSimulationController(new SimulationController(referenceHandler));
         referenceHandler.setEditorController(new EditorController(referenceHandler));
@@ -54,6 +49,7 @@ public class AutomatonMain extends Application {
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             try {
                 AutomatonIO.clearAutomataDirectory();
+                AutomatonIO.clearSafeDir();
                 DatabaseController.shutdown();
             } catch (IOException e) {
                 Alert alert = new Alert(Alert.AlertType.ERROR, "shutdownHook ist schief gelaufen" +

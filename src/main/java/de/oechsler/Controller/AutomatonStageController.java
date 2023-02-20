@@ -169,7 +169,6 @@ public class AutomatonStageController {
         }
     }
 
-
     public boolean setPosXYAndReturnBool(double x, double y) {
         if (x < 0 || y < 0) {
             return false;

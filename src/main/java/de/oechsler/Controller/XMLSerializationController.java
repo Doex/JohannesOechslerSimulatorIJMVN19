@@ -4,27 +4,16 @@ import de.oechsler.model.Automaton;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.stage.FileChooser;
-
 import javax.xml.stream.*;
 import java.io.*;
 
-
-/**
- *Tabelle: Nanme pk, zooomzahl, pos x, pos y, breite (col), höhe (row), speed
- *
- * Probleme: Speichern mit Namen -> existiert der Name bereits (Überschreiben), wenn nicht (Neu erstellen) -> muss aber alles locked sein
- *          Löschen -> als transaktion
- *          Wiederherstellen -> Abfragen der Werte, nochmal prüfen ob der Eintrag vielleicht doch in der zwischenzeit gelöscht worden ist.
- *
- */
 public class XMLSerializationController {
 
     private static FileChooser fileChooser;
 
     static {
-
         fileChooser = new FileChooser();
-        File dir = new File(".");
+        File dir = new File("safeDir");
         fileChooser.setInitialDirectory(dir);
         FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("*.xml", "*.xml");
         fileChooser.getExtensionFilters().add(extFilter);

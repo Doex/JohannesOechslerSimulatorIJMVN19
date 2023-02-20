@@ -19,7 +19,7 @@ public class AutomatonStage extends Stage {
     private final PopulationPane populationPane;
     private final MessageLabel msgLabel;
     private final ReferenceHandler referenceHandler;
-    private final StatesPanel statesPanel;
+    private final StatesPane statesPane;
     private final Editor editor;
 
 
@@ -217,6 +217,9 @@ public class AutomatonStage extends Stage {
         this.stopSimulationButton.setGraphic(new ImageView("Icons/Stop24.gif"));
         this.stopSimulationButton.setTooltip(new Tooltip("Simulation stoppen"));
         this.changeSimulationSpeedSlider = new Slider();
+        this.changeSimulationSpeedSlider.setMajorTickUnit(50.0);
+        this.changeSimulationSpeedSlider.setMin(100);
+        this.changeSimulationSpeedSlider.setMax(400);
         this.changeSimulationSpeedSlider.setShowTickLabels(true);
         this.changeSimulationSpeedSlider.setShowTickMarks(true);
         this.changeSimulationSpeedSlider.setTooltip(new Tooltip("Simulationsgeschwindigkeit"));
@@ -230,7 +233,7 @@ public class AutomatonStage extends Stage {
         this.stateBoxes = new VBox(10);
         this.stateBoxes.setMinHeight(500);
 
-        this.statesPanel = new StatesPanel(this.referenceHandler, this);
+        this.statesPane = new StatesPane(referenceHandler, this);
 
         //Region
         Region populationView = new Region();
@@ -513,5 +516,7 @@ public class AutomatonStage extends Stage {
         return languageGroup;
     }
 
-
+    public StatesPane getStatesPane() {
+        return statesPane;
+    }
 }
